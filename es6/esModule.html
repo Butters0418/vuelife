@@ -35,24 +35,32 @@
 
           // #2 匯入方法
           // #2-1 預設匯入
-          // 因為預設匯出沒有名字，所以可以為它命名
+          // 因為預設匯出沒有名字，所以可以為它命名，每個檔案唯一
           import myComponent from './exportJs1.js'
           myComponent.init();
 
 
-// 注意：因為傳參考的特性，因此元件無法重複利用（Vue.js 中會解決此問題）
+          // 注意：因為傳參考的特性，因此元件無法重複利用（Vue.js 中會解決此問題）
 
-// #2-2 具名匯入
-// 單一匯入（建議寫法）
+          // #2-2 具名匯入
+          // 單一匯入（建議寫法）
+          // import { a, b, c } from './exportJs2.js'
+          // console.log(a);
+          // b();
+          // console.log(c(10, 20))
 
 
 
-// 全部匯入（不建議，錯誤較難發現）
+          // 全部匯入（不建議，錯誤較難發現）
+          import * as all from './exportJs2.js';
+          console.log(all);
 
 
 
-// #3 SideEffect
-// sideEffect.js（沒有包含匯出的檔案）
+          // #3 SideEffect
+          // sideEffect.js（沒有包含匯出的檔案）
+          import './sideEffect.js';
+          console.log($);
 
 
 
