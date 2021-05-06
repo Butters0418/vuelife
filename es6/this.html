@@ -24,9 +24,9 @@
           // var a = '全域'
           // function fn(params) {
           //   console.log(params, this, window, arguments);
-          //   debugger;
+          //   // debugger;
           // }
-          // fn();
+          // fn(1, 2);
 
 
           // #2 this 的指向為何
@@ -45,7 +45,7 @@
           function callSomeone() {
             console.log(this.someone);
           }
-          // callSomeone();
+          callSomeone();
 
           // #4 各種運用變化
           // var obj2 = {
@@ -73,16 +73,16 @@
           // }
           // obj3.fn();
 
-          var obj4 = {
-            someone: '物件 4',
-            fn() {
-              console.log(this.someone);
-              setTimeout(function () {
-                console.log(this.someone); // setTimeout 多為 simple call
-              });
-            }
-          }
-          obj4.fn();
+          // var obj4 = {
+          //   someone: '物件 4',
+          //   fn() {
+          //     console.log(this.someone);
+          //     setTimeout(function () {
+          //       console.log(this.someone); // setTimeout 多為 simple call
+          //     });
+          //   }
+          // }
+          // obj4.fn();
 
         </script>
         <!-- 🙇🙇練習結束🙇🙇 -->

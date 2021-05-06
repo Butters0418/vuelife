@@ -45,7 +45,7 @@
           //   name: '小明',
           //   callName: function () {
           //     console.log('1', this.name); // 1 小明
-          //     setTimeout(function () {
+          //     setTimeout(() => {
           //       console.log('2', this.name); // 2
           //       console.log('3', this); // 3
           //     }, 10);
@@ -69,6 +69,7 @@
           // callName無自己的 this，因此往上找 callMe()，而 call 由 person 呼叫
           // 因此 callName 的this 為 person
           // var name = '全域'
+
           // const person = {
           //   name: '小明',
           //   callMe() {
@@ -82,9 +83,9 @@
 
           // #4 實戰手法
           var someone = '全域';
-          // function callSomeone() {
-          //   console.log(this.someone);
-          // }
+          function callSomeone() {
+            console.log(this.someone);
+          }
 
           // 法1 將 this 指向變數
           // 法2 使用箭頭函式
